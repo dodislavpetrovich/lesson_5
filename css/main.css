@@ -1,5 +1,6 @@
 .main {
   background-color: #eee;
+  font-family: Arial, sans-serif;
 }
 
 .main__slider {
@@ -16,4 +17,82 @@
   text-transform: uppercase;
   color: #fff;
   text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.904);
+}
+
+.container--blue {
+  background-color: #0077b6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section > .list {
+  display: flex;
+  max-width: 1400px;
+  color: #fff;
+}
+
+.section > .list > .list-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 20px;
+  max-width: calc(25% - 40px);
+}
+
+.section > .list > .list-item:first-of-type {
+  margin-left: 0;
+  max-width: calc(25% - 20px);
+}
+
+.section > .list > .list-item:last-of-type {
+  margin-right: 0;
+  max-width: calc(25% - 20px);
+}
+
+.section > .list > .list-item > h2 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.section > .list > .list-item > h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0 20px;
+}
+.section > .list > .list-item > p {
+  text-align: justify;
+}
+
+@media screen and (max-width: 1280px) {
+  .section.container--blue {
+    height: auto;
+  }
+  .section > .list {
+    flex-wrap: wrap;
+  }
+
+  .section > .list > .list-item,
+  .section > .list > .list-item:first-of-type, 
+  .section > .list > .list-item:last-of-type {
+    max-width: calc(50% - 120px);
+    margin: 0 60px 30px;
+  }
+
+  .section > .list > .list-item > p {
+      font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section > .list {
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+  .section > .list > .list-item,
+  .section > .list > .list-item:first-of-type, 
+  .section > .list > .list-item:last-of-type {
+    max-width: 300px;
+    margin: 0 auto 30px;
+  }
 }
